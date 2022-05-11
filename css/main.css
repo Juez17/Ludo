@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.field {
+  border: 1px solid black;
+}
+
+.yellow-field,
+.yellow-end-column {
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+.roll-button-text {
+  font-size: 32px;
+  font-weight: bold;
+
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  align-self: center;
+  justify-self: center;
+}
+
+.center-box {
+  background-color: rgb(132, 136, 143);
+  grid-column: 7 / span 3;
+  grid-row: 7 / span 3;
+
+  display: grid;
+  grid-template-rows: repeat(3, 40px);
+  grid-template-columns: repeat(3, 40px);
+  align-content: center;
+}
+
+.red-field,
+.red-end-column {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.green-field,
+.green-end-column {
+  background-color: green;
+  border: 1px solid black;
+}
+
+.blue-field,
+.blue-end-column {
+  background-color: rgba(130, 171, 237, 1);
+  border: 1px solid black;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+
+  justify-content: center;
+  align-content: center;
+}
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(15, 40px);
+  grid-template-rows: repeat(15, 40px);
+
+  /* row-gap: 10px;
+    column-gap: 10px; */
+  /* background-color: grey; */
+  height: 600px;
+  width: 600px;
+  border: 1px solid black;
+}
+
+/* .game-board, .red-base, .green-base, .blue-base, .yellow-base, .field, .yellow-end-column, .blue-end-column,
+.green-end-column, .red-end-column, .blue-field, .green-field, .yellow-field, .red-field {
+    border-radius: 50px;
+} */
+.red-base {
+  background-color: red;
+  grid-column: 1 / span 6;
+  grid-row: 10 / span 6;
+
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  grid-template-rows: repeat(6, 40px);
+}
+
+.turn-banner {
+  position: fixed;
+  top: 40px;
+  left: 0px;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.red-pawn-spot,
+.blue-pawn-spot,
+.yellow-pawn-spot,
+.green-pawn-spot {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.red-spot1,
+.green-spot1,
+.blue-spot1,
+.yellow-spot1 {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+
+.red-spot2,
+.green-spot2,
+.blue-spot2,
+.yellow-spot2 {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+
+.red-spot3,
+.green-spot3,
+.blue-spot3,
+.yellow-spot3 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.red-spot4,
+.green-spot4,
+.blue-spot4,
+.yellow-spot4 {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+
+.green-base {
+  background-color: green;
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 6;
+
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  grid-template-rows: repeat(6, 40px);
+}
+.blue-base {
+  background-color: rgba(130, 171, 237, 1);
+  grid-column: 10 / span 6;
+  grid-row: 10 / span 6;
+
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  grid-template-rows: repeat(6, 40px);
+}
+
+.yellow-base {
+  background-color: yellow;
+  grid-column: 10 / span 6;
+  grid-row: 1 / span 6;
+
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  grid-template-rows: repeat(6, 40px);
+}
+
+.modal-window {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  display: grid;
+  row-gap: 17px;
+  column-gap: 10px;
+  grid-template-rows: repeat(4, 70px);
+  grid-template-columns: repeat(4, 120px);
+  justify-content: center;
+  align-self: center;
+
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+.modal-window button h4 {
+  font-size: 20px;
+  color: white;
+}
+
+.modal-window .start-button:hover {
+  background-color: grey;
+}
+
+.modal-window .start-button h4 {
+  margin: 15px 40px;
+}
+
+.modal-window .start-button {
+  background-color: rgb(88, 88, 88);
+  margin: 5px 40px;
+  grid-row: 4/5;
+  grid-column: 2/4;
+}
+
+.modal-window .start-button:hover {
+  background-color: grey;
+}
+
+.blue {
+  background-color: rgb(9, 139, 139);
+  transition: background-color 1s;
+  opacity: 0.5;
+}
+
+.yellow {
+  background-color: rgb(155, 155, 6);
+  transition: background-color 1s;
+  opacity: 0.5;
+}
+
+.red {
+  background-color: rgb(148, 0, 0);
+  transition: background-color 1s;
+  opacity: 0.5;
+}
+
+.green {
+  background-color: rgb(0, 88, 0);
+  transition: background-color 1s;
+  opacity: 0.5;
+}
+
+.blue:hover,
+.blue-toggled {
+  background-color: aqua;
+  opacity: 1;
+}
+
+.yellow:hover,
+.yellow-toggled {
+  background-color: rgb(241, 241, 6);
+  opacity: 1;
+}
+
+.red:hover,
+.red-toggled {
+  background-color: red;
+  opacity: 1;
+}
+
+.green:hover,
+.green-toggled {
+  background-color: green;
+  opacity: 1;
+}
+
+.modal-window button {
+  border-radius: 25px;
+  grid-row: 3/4;
+  text-align: center;
+}
+
+.modal-window h3 {
+  font-size: 38px;
+
+  color: white;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  align-self: center;
+  justify-self: center;
+}
+
+.invisible {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .roll-button-text {
+    font-size: 46px;
+    font-weight: bold;
+
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    align-self: center;
+    justify-self: center;
+  }
+
+  .modal-window .start-button {
+    margin: 20px 100px;
+  }
+
+  .modal-window .start-button h4 {
+    margin: 20px 100px;
+  }
+
+  /* font-size: 67px; */
+
+  .modal-window h3 {
+    font-size: 67px;
+  }
+
+  .modal-window button h4 {
+    font-size: 46px;
+    color: white;
+  }
+
+  .modal-window {
+    grid-template-rows: repeat(4, 130px);
+    grid-template-columns: repeat(4, 245px);
+  }
+
+  .center-box {
+    background-color: rgb(132, 136, 143);
+    grid-column: 7 / span 3;
+    grid-row: 7 / span 3;
+
+    display: grid;
+    grid-template-rows: repeat(3, 60px);
+    grid-template-columns: repeat(3, 60px);
+    align-content: center;
+  }
+
+  .game-board {
+    height: 900px;
+    width: 900px;
+
+    grid-template-columns: repeat(15, 60px);
+    grid-template-rows: repeat(15, 60px);
+  }
+
+  .red-base {
+    background-color: red;
+    grid-column: 1 / span 6;
+    grid-row: 10 / span 6;
+
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(6, 60px);
+  }
+
+  .green-base {
+    background-color: green;
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 6;
+
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(6, 60px);
+  }
+  .blue-base {
+    background-color: rgba(130, 171, 237, 1);
+    grid-column: 10 / span 6;
+    grid-row: 10 / span 6;
+
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(6, 60px);
+  }
+
+  .yellow-base {
+    background-color: yellow;
+    grid-column: 10 / span 6;
+    grid-row: 1 / span 6;
+
+    display: grid;
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(6, 60px);
+  }
+}

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ludo</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="icon" href="images/favicon.png" /> -->
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="game-board">
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="yellow-end-column"></div>
+        <div class="field yellow-field"></div>
+
+        <div class="field"></div>
+        <div class="yellow-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="yellow-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="yellow-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="yellow-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="green-field"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <!-- konczy sie pierwszy wiersz z lewej strony-->
+
+        <div class="center-box">
+          <p class="roll-button-text">Roll</p>
+        </div>
+
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <!--    zaczyna sie tutaj drugi wiersz  z lewej strony-->
+
+        <div class="field"></div>
+        <div class="green-end-column"></div>
+        <div class="green-end-column"></div>
+
+        <div class="green-end-column"></div>
+        <div class="green-end-column"></div>
+        <div class="green-end-column"></div>
+
+        <!-- tutaj sie konczy drugi wiersz z lewej strony-->
+
+        <div class="blue-end-column"></div>
+        <div class="blue-end-column"></div>
+        <div class="blue-end-column"></div>
+
+        <div class="blue-end-column"></div>
+        <div class="blue-end-column"></div>
+        <div class="field"></div>
+
+        <!-- tutaj zaczyna sie trzeci wiersz z lewej -->
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <!-- tutaj konczy sie trzeci wiersz z lewej-->
+
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="blue-field"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="red-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="red-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="red-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="red-end-column"></div>
+        <div class="field"></div>
+
+        <div class="red-field"></div>
+        <div class="red-end-column"></div>
+        <div class="field"></div>
+
+        <div class="field"></div>
+        <div class="field"></div>
+        <div class="field"></div>
+
+        <div class="green-base">
+          <div class="green-pawn-spot green-spot1">
+            <svg
+              class="green-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class=""
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#2eef55"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#29fd5e"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="green-pawn-spot green-spot2">
+            <svg
+              class="green-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#2eef55"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#29fd5e"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="green-pawn-spot green-spot3">
+            <svg
+              class="green-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#2eef55"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#29fd5e"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="green-pawn-spot green-spot4">
+            <svg
+              class="green-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#2eef55"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#29fd5e"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="yellow-base">
+          <div class="yellow-pawn-spot yellow-spot1">
+            <svg
+              class="yellow-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#f3e402"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#ffef04"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="yellow-pawn-spot yellow-spot2">
+            <svg
+              class="yellow-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#f3e402"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#ffef04"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="yellow-pawn-spot yellow-spot3">
+            <svg
+              class="yellow-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#f3e402"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#ffef04"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="yellow-pawn-spot yellow-spot4">
+            <svg
+              class="yellow-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#f3e402"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#ffef04"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="red-base">
+          <div class="red-pawn-spot red-spot1">
+            <svg
+              class="red-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#a11313"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#cf2020"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="red-pawn-spot red-spot2">
+            <svg
+              class="red-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#a11313"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#cf2020"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="red-pawn-spot red-spot3">
+            <svg
+              class="red-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#a11313"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#cf2020"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+          <div class="red-pawn-spot red-spot4">
+            <svg
+              class="red-pawn"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              version="1.1"
+              x="0"
+              y="0"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+            >
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+                fill="#a11313"
+                data-original="#2ea2ef"
+              />
+              <path
+                xmlns="http://www.w3.org/2000/svg"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256  C374.626,512,470.793,397.385,470.793,256z"
+                fill="#cf2020"
+                data-original="#54bbff"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="blue-base">
+          <div class="blue-pawn-spot blue-spot1">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class="blue-pawn"
+            >
+              <path
+                style="fill: #2ea2ef"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+              />
+              <path
+                style="fill: #54bbff"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256
+                    C374.626,512,470.793,397.385,470.793,256z"
+              />
+            </svg>
+          </div>
+          <div class="blue-pawn-spot blue-spot2">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class="blue-pawn"
+            >
+              <path
+                style="fill: #2ea2ef"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+              />
+              <path
+                style="fill: #54bbff"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256
+                  C374.626,512,470.793,397.385,470.793,256z"
+              />
+            </svg>
+          </div>
+          <div class="blue-pawn-spot blue-spot3">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class="blue-pawn"
+            >
+              <path
+                style="fill: #2ea2ef"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+              />
+              <path
+                style="fill: #54bbff"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256
+                    C374.626,512,470.793,397.385,470.793,256z"
+              />
+            </svg>
+          </div>
+          <div class="blue-pawn-spot blue-spot4">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 512 512"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class="blue-pawn"
+            >
+              <path
+                style="fill: #2ea2ef"
+                d="M256,0v512c141.385,0,256-114.615,256-256S397.385,0,256,0z"
+              />
+              <path
+                style="fill: #54bbff"
+                d="M470.793,256C470.793,114.615,374.626,0,256,0C114.615,0,0,114.615,0,256s114.615,256,256,256
+                    C374.626,512,470.793,397.385,470.793,256z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-window">
+      <h3>Choose Players</h3>
+      <button class="green green2">
+        <h4>Green</h4>
+      </button>
+      <button class="red red2">
+        <h4>Red</h4>
+      </button>
+      <button class="blue blue2">
+        <h4>Blue</h4>
+      </button>
+      <button class="yellow yellow2">
+        <h4>Yellow</h4>
+      </button>
+      <button class="start-button">
+        <h4>Start</h4>
+      </button>
+    </div>
+
+    <div class="turn-banner" style="display: none">
+      <p>teraz tura niebieskiego</p>
+    </div>
+  </body>
+</html>
